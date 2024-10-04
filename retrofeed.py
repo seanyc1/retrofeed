@@ -116,9 +116,7 @@ def show_title(d):
     os.system('clear')
     for i in range(24):
         print()
-    d.print(f'RETROFEED - VERSION {VERSION}')
-    d.print(f'Copyright (c) {COPYRIGHT_YEAR} Jeff Jetton')
-    d.print('MIT License')
+    d.print(f'HELLO SEAN')
     d.newline()
 
 
