@@ -9,6 +9,10 @@ import tomllib
 
 from display import Display
 
+VERSION = '1.0.0'
+COPYRIGHT_YEAR = '2023'
+CONFIG_FILENAME = 'config.toml'
+EXPECTED_TABLES = ['display', 'segments', 'playlist']
 
 def check_config_tables(config):
 missing_tables = []
@@ -23,8 +27,6 @@ if 'module' not in config['segments'][key]:
 bad_segments.append(key)
 if len(bad_segments) > 0:
 raise RuntimeError('No module defined for segment(s) in config: ' + ', '.join(bad_segments))
-
-
 
 def override_timings(config):
 config['display']['cps'] = 1000
@@ -85,6 +87,7 @@ return parser.parse_args()
 ###############################################################################
 
 def main():
+args = get_args()
 
 if name == "main":
 main()
