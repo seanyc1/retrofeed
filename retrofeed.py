@@ -10,14 +10,6 @@ import tomllib
 from display import Display
 
 
-
-VERSION = '1.0.0'
-COPYRIGHT_YEAR = '2023'
-CONFIG_FILENAME = 'config.toml'
-EXPECTED_TABLES = ['display', 'segments', 'playlist']
-
-
-
 def check_config_tables(config):
 missing_tables = []
 for table in EXPECTED_TABLES:
